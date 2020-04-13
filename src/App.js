@@ -18,27 +18,23 @@ class App extends React.Component{
   }
   
   trialMethod=()=>{
-  	if(this.state.count === 5){
-		}
+    const comp1=<div>
+  			Five
+  		    </div>
+    return comp1
   }
 
   render(){
-  	const comp1=<div>
-  			On
-  		    </div>
+
+    const comp1 = this.trialMethod();
   	const comp2=<div>
-  			Off
+  			Not Five
   		    </div>
     return(
         <div>
           <h1>{this.state.count}</h1>
           <button onClick={this.handleClick}>Change!</button>
-          <h2>{
-          
-         
-  
-                comp2 
-          }</h2>
+          <view>{(this.state.count === 5)?comp1:comp2}</view>
         </div>
     )
   }
