@@ -8,10 +8,10 @@ class App extends React.Component{
     brand:'Ford',
     switch1:true
     }
-    this.handleClick=this.handleClick.bind(this)
+    						//arrow functions can work without binding this.handleClick=this.handleClick.bind(this)
   }
 
-  handleClick=()=>{
+  increase=()=>{
     this.setState(prevState=>{
       return{count:prevState.count +1}
     })
@@ -24,9 +24,7 @@ class App extends React.Component{
   }
   
   trialMethod=()=>{
-    const comp1=<div>
-  			Five
-  		    </div>
+    const comp1=<div>Five</div>
     return comp1
   }
 
@@ -39,7 +37,7 @@ class App extends React.Component{
     return(
         <div>
           <h1>{this.state.count}</h1>
-          <button onClick={this.handleClick}>Change!</button>
+          <button onClick={this.increase}>Increase!</button>
           <view>{(this.state.count === 5)?this.trialMethod():comp2}</view>
           <button onClick={this.decrease}>Decrease!</button>
         </div>
