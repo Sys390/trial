@@ -26,7 +26,7 @@ class App extends React.Component{
 
   render(){
 
-    const comp1 = this.trialMethod();
+    //const comp1 = this.trialMethod();
   	const comp2=<div>
   			Not Five
   		    </div>
@@ -34,7 +34,7 @@ class App extends React.Component{
         <div>
           <h1>{this.state.count}</h1>
           <button onClick={this.handleClick}>Change!</button>
-          <view>{(this.state.count === 5)?comp1:comp2}</view>
+          <view>{(this.state.count === 5)?this.trialMethod():comp2}</view>
         </div>
     )
   }
