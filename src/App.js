@@ -17,6 +17,12 @@ class App extends React.Component{
     })
   }
   
+  decrease=()=>{
+    this.setState(prevState=>{
+      return{count:prevState.count -1}
+    })
+  }
+  
   trialMethod=()=>{
     const comp1=<div>
   			Five
@@ -35,6 +41,7 @@ class App extends React.Component{
           <h1>{this.state.count}</h1>
           <button onClick={this.handleClick}>Change!</button>
           <view>{(this.state.count === 5)?this.trialMethod():comp2}</view>
+          <button onClick={this.decrease}>Decrease!</button>
         </div>
     )
   }
