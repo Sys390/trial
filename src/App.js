@@ -27,6 +27,17 @@ class App extends React.Component{
     const comp1=<div>Five</div>
     return comp1
   }
+  
+  
+  checkeven=()=>{
+  let comp
+  	if(this.state.count%2===0){
+  		comp =<div>Even</div>
+  	}else{
+  		comp = <h2>Odd</h2>
+  	}
+  	return comp
+  }
 
   render(){
 
@@ -40,6 +51,7 @@ class App extends React.Component{
           <button onClick={this.increase}>Increase!</button>
           <view>{(this.state.count === 5)?this.trialMethod():comp2}</view>
           <button onClick={this.decrease}>Decrease!</button>
+          <div>{this.checkeven()}</div>
         </div>
     )
   }
